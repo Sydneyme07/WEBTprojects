@@ -11,4 +11,8 @@
 24-Hour Travel Guide
 </a>
 </li>
+<li>
+<a href="responsive_media/index.html" target="_blank">
+</li>
+</a>
 </ul>
