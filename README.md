@@ -9,6 +9,6 @@
 <li>
 <a href="advanced_css/index.html" target="_blank">
 24-Hour Travel Guide
-<a>
+</a>
 </li>
 </ul>
