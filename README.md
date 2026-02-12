@@ -13,6 +13,7 @@
 </li>
 <li>
 <a href="responsive_media/index.html" target="_blank">
+Your 24-Hour Travel Guide
 </li>
 </a>
 </ul>
