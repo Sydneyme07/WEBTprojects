@@ -126,6 +126,7 @@ main h4 {
   border-radius: 15px;
   padding: 18px;
   background-color: #f5e6dc;
+  gap: 30px;
 }
 
 /* TABLET */
@@ -138,7 +139,8 @@ main h4 {
 /* DESKTOP */
 @media (min-width: 1024px){
   .packing-box{
-    width: 48%;              /* still 2 columns */
+    width: 48%;  
+    gap: 30px;            /* still 2 columns */
   }
 }
 
@@ -146,7 +148,8 @@ main h4 {
 
 @media (min-width: 701px){
   .packing-box{
-    width: 48%;      /* desktop/tablet = side-by-side */
+    width: 48%;
+    gap: 30px;      /* desktop/tablet = side-by-side */
   }
 }
 
