@@ -163,12 +163,21 @@ main h4 {
   }
 }
 
-img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
+@media (max-width: 480px){
+  nav li{
+    display: block;        /* stack buttons */
+    margin: 8px 0;
+  }
+
+  nav li a{
+    width: 100%;           /* full width of container */
+    max-width: 320px;      /* optional: keeps it from being HUGE */
+    margin: 0 auto;        /* centers the button */
+  }
+}
+
+html, body{
+  overflow-x: hidden;
 }
 
 footer {
