@@ -110,32 +110,44 @@ main h4 {
         color: #5a3a2e;
     }
 
-.packing-columns {
-    display: flex;
-    align-items: flex-start;
-    margin: 25px 0;
-    padding: 0 15px;
-    gap: 30px;
+./* PACKING PAGE — MOBILE FIRST */
 
-}
-
-.packing-box {
-   
-    border: 2px solid #143959;
-    border-radius: 15px;
-    padding: 18px;
-    background-color: #f5e6dc;
-
-}
-
-.packing-box h3 {
- margin-top: 0;
-}
-.packing-columns { 
+.packing-columns{
+  display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+  margin: 25px 0;
+  padding: 0 15px;
 }
-.packing-box {
-  max-width: 100%;
+
+.packing-box{
+  width: 100%;               /* Mobile = stacked */
+  border: 2px solid #143959;
+  border-radius: 15px;
+  padding: 18px;
+  background-color: #f5e6dc;
+}
+
+/* TABLET */
+@media (min-width: 768px){
+  .packing-box{
+    width: 48%;              /* 2 columns */
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px){
+  .packing-box{
+    width: 48%;              /* still 2 columns */
+  }
+}
+
+
+
+@media (min-width: 701px){
+  .packing-box{
+    width: 48%;      /* desktop/tablet = side-by-side */
+  }
 }
 
 .two-col{
