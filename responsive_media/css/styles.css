@@ -1,4 +1,5 @@
 /* Global Styles */
+* { box-sizing: border-box; }
 
 
 body {
@@ -129,6 +130,12 @@ main h4 {
 
 .packing-box h3 {
  margin-top: 0;
+}
+.packing-columns { 
+  flex-wrap: wrap;
+}
+.packing-box {
+  max-width: 100%;
 }
 
 .two-col{
