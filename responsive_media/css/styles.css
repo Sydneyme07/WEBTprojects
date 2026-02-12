@@ -108,32 +108,42 @@ main h4 {
 
 .packing-columns {
     display: flex;
-    gap: 30px;
     align-items: flex-start;
     margin: 25px 0;
+    padding: 0 15px;
+    gap: 30px;
 
 }
 
 .packing-box {
-    flex: 1;
+   
     border: 2px solid #143959;
     border-radius: 15px;
     padding: 18px;
     background-color: #f5e6dc;
+    gap: 20px;
 }
 
 .packing-box h3 {
  margin-top: 0;
 }
-.two-col {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr;  /* phone = stacked */
+  gap: 40px;
+  margin: 25px 0;
+}
+
+.three-col {
+    display: grid;
+   padding: 0 15px;
+    grid-template-columns: 1fr; /small screens/ = 1 column*/
     margin: 25px 0;
+    gap: 40px;
 }
 
 .card {
-    flex: 1;
     border: 2px solid #bf9b7a;
     border-radius: 20px;
     border: 2px solid #143959;
@@ -141,7 +151,25 @@ main h4 {
     background-color: #f5e6dc;
 }
 
+@media (min-width: 700px) {
+  .three-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
+@media (min-width: 1000px) {
+  .three-col {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
 footer {
     padding: 40px;
