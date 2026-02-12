@@ -126,7 +126,6 @@ main h4 {
   border-radius: 15px;
   padding: 18px;
   background-color: #f5e6dc;
-  gap: 30px;
 }
 
 /* TABLET */
@@ -139,8 +138,7 @@ main h4 {
 /* DESKTOP */
 @media (min-width: 1024px){
   .packing-box{
-    width: 48%;  
-    gap: 30px;            /* still 2 columns */
+    width: 48%;              /* still 2 columns */
   }
 }
 
@@ -148,8 +146,7 @@ main h4 {
 
 @media (min-width: 701px){
   .packing-box{
-    width: 48%;
-    gap: 30px;      /* desktop/tablet = side-by-side */
+    width: 48%;      /* desktop/tablet = side-by-side */
   }
 }
 
@@ -202,7 +199,27 @@ main h4 {
   }
 
 }
+/* PACKING PAGE BOXES */
+.packing-columns{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 25px 0;
+  padding: 0 15px;
+  align-items: flex-start;
+}
 
+.packing-box{
+  flex: 1 1 320px;        /* stack on small screens, sit side-by-side when space allows */
+  border: 2px solid #143959;
+  border-radius: 15px;
+  padding: 18px;
+  background-color: #f5e6dc;
+}
+
+.packing-box h3{
+  margin-top: 0;
+}
 
 html, body{
   overflow-x: hidden;
