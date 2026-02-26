@@ -18,7 +18,6 @@
 Your 24-Hour Travel Guide
 </a>
 </li>
-</ul>
 
 <li>
 <a href="sme_final/index.html" target="_blank">
