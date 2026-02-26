@@ -322,4 +322,11 @@ img{ max-width: 100%; height: auto; }
 
   p, ul, ol{ max-width: 100%; }
 }
-  
+
+.gallery-page main{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
