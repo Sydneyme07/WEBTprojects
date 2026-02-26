@@ -256,3 +256,19 @@ footer{
 
   p, ul, ol{ max-width: 100%; }
 }
+.recipe{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  border-top: 6px solid var(--coral);
+}
+.recipe:hover{
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+}
+h2{
+  color: var(--mocha);
+  letter-spacing: 0.5px;
+}
