@@ -1,9 +1,277 @@
+/* =========================
+   STACKD. by Sydney — Styles
+   Editorial bakery vibe:
+   warm cream + cocoa text + coral/sea accents
+   ========================= */
 
-.playfair-<uniquifier> {
-  font-family: "Playfair", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --cream: #faf6f1;
+  --paper: #ffffff;
+  --cocoa: #3a2a24;
+  --mocha: #6b4b3e;
+  --coral: #d97c6c;     /* fun accent */
+  --sea:   #2f6f7a;     /* secondary accent */
+  --line:  rgba(58,42,36,0.15);
+  --shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* Page */
+body{
+  background: radial-gradient(1200px 600px at 15% 0%, rgba(217,124,108,0.14), transparent 55%),
+              radial-gradient(1200px 600px at 90% 10%, rgba(47,111,122,0.14), transparent 50%),
+              var(--cream);
+  color: var(--cocoa);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.65;
+}
+
+/* Container */
+#container{
+  width: min(1100px, 90%);
+  margin: 34px auto 50px;
+}
+
+/* Header */
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0 8px;
+}
+
+header img{
+  width: min(360px, 90%);
+  height: auto;
+  display: block;
+}
+
+/* Nav */
+nav{
+  margin: 18px 0 30px;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 12px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--cocoa);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+nav a:hover{
+  background: rgba(217,124,108,0.16);
+  color: var(--mocha);
+  transform: translateY(-1px);
+}
+
+/* Main layout */
+main{
+  background: rgba(255,255,255,0.65);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+/* Typography */
+h1, h2, h3, h4{
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+h1{
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  letter-spacing: 1px;
+}
+
+h2{
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  color: var(--mocha);
+}
+
+h3{
+  font-size: 1.2rem;
+  margin-top: 26px;
+  color: var(--cocoa);
+}
+
+h4{
+  font-size: 1.02rem;
+  margin-top: 14px;
+  color: var(--sea);
+}
+
+p{
+  margin: 10px 0 18px;
+  max-width: 75ch;
+}
+
+/* Lists */
+ul, ol{
+  margin: 10px 0 18px 22px;
+}
+
+li{
+  margin: 6px 0;
+}
+
+/* Horizontal rules */
+hr{
+  border: none;
+  height: 1px;
+  background: var(--line);
+  margin: 26px 0;
+}
+
+/* Footer */
+footer{
+  text-align: center;
+  margin-top: 18px;
+  padding: 18px 0;
+  color: rgba(58,42,36,0.75);
+}
+
+/* =========================
+   Recipe Cards
+   ========================= */
+.recipe{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+  margin: 18px 0 22px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.recipe h2{
+  margin-bottom: 10px;
+}
+
+.recipe p{
+  margin-top: 0;
+}
+
+.recipe ul, .recipe ol{
+  margin-left: 22px;
+}
+
+/* Resources section */
+.resources{
+  background: rgba(47,111,122,0.06);
+  border: 1px solid rgba(47,111,122,0.20);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-top: 26px;
+}
+
+.resources a{
+  color: var(--sea);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.resources a:hover{
+  text-decoration: underline;
+}
+
+/* =========================
+   Video Embeds
+   ========================= */
+.video-section{
+  margin: 18px 0 28px;
+}
+
+.video-wrapper{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #000;
+  box-shadow: 0 12px 22px rgba(0,0,0,0.10);
+}
+
+.video-wrapper iframe{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* If you have a standalone iframe (not wrapped), still make it nice */
+main > iframe{
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 18px;
+  display: block;
+  margin: 18px auto;
+  box-shadow: 0 12px 22px rgba(0,0,0,0.10);
+}
+
+/* =========================
+   Gallery (3 columns)
+   ========================= */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 12px 0 30px;
+}
+
+.gallery-item{
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease;
+}
+
+.gallery-item:hover{
+  transform: translateY(-2px);
+}
+
+.gallery-item img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  main{ padding: 22px; }
+  .gallery{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px){
+  #container{ width: 92%; }
+  nav a{ padding: 9px 12px; }
+  .gallery{ grid-template-columns: 1fr; }
+  .gallery-item img{ height: 240px; }
 }
