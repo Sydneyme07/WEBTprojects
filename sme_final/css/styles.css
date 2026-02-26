@@ -22,16 +22,18 @@ body{
   line-height: 1.65;
 }
 
-img{ max-width: 100%; height: auto; display: block; }
 
-/* Wider site on desktop */
+img{ max-width: 100%; height: auto; display: block; }
+iframe{ max-width: 100%; }
+
+
 #container{
-  width: 96%;
-  max-width: 1500px;
-  margin: 20px auto 50px;
+  width: 95%;
+  max-width: 1600px;
+  margin: 18px auto 40px;
 }
 
-/* Header */
+
 header{
   display: flex;
   justify-content: center;
@@ -40,10 +42,10 @@ header{
 }
 
 header img{
-  width: min(360px, 90%);
+  width: min(380px, 92%);
 }
 
-/* Nav */
+
 nav{ margin: 18px 0 30px; }
 
 nav ul{
@@ -53,7 +55,7 @@ nav ul{
   justify-content: center;
   gap: 10px;
   padding: 14px 12px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.72);
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
@@ -78,19 +80,20 @@ nav a:hover{
 
 /* Main card */
 main{
-  background: rgba(255,255,255,0.65);
+  width: 100%;
+  max-width: none;
+  background: rgba(255,255,255,0.68);
   border: 1px solid var(--line);
   border-radius: 22px;
   padding: 34px;
   box-shadow: var(--shadow);
-  width: 100%;
 }
 
-/* Typography */
+/* Type */
 h1, h2, h3, h4{ line-height: 1.2; margin-bottom: 12px; }
 
 h1{
-  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
   letter-spacing: 1px;
 }
 
@@ -132,7 +135,7 @@ footer{
   color: rgba(58,42,36,0.75);
 }
 
-/* Recipe card */
+
 .recipe{
   background: var(--paper);
   border: 1px solid var(--line);
@@ -140,6 +143,21 @@ footer{
   padding: 22px;
   box-shadow: 0 10px 22px rgba(0,0,0,0.06);
 }
+
+
+.grid-2{
+  display: grid;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+@media (min-width: 900px){
+  .grid-2{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+
 
 .resources{
   background: rgba(47,111,122,0.06);
@@ -158,26 +176,11 @@ footer{
 .resources a:hover{ text-decoration: underline; }
 
 
-.grid-2{
-  display: grid;
-  gap: 18px;
-  margin-top: 14px;
-}
-
-
-@media (min-width: 900px){
-  .grid-2{
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-  }
-}
-
-
 .gallery{
   display: grid;
   gap: 18px;
   margin: 14px 0 30px;
-  grid-template-columns: 1fr; /* phone */
+  grid-template-columns: 1fr;
 }
 
 .gallery-item{
@@ -197,19 +200,19 @@ footer{
   object-fit: cover;
 }
 
-/* Tablet */
+
 @media (min-width: 700px){
   .gallery{ grid-template-columns: repeat(3, 1fr); }
   .gallery-item img{ height: 280px; }
 }
 
-/* Desktop */
+
 @media (min-width: 1100px){
   .gallery{ grid-template-columns: repeat(4, 1fr); }
   .gallery-item img{ height: 340px; }
 }
 
-/* Videos */
+
 .video-section{ margin: 18px 0 28px; }
 
 .video-wrapper{
@@ -252,38 +255,4 @@ footer{
   }
 
   p, ul, ol{ max-width: 100%; }
-}
-
-#container{
-  width: 95%;
-  max-width: 1600px;
-  margin: 18px auto 40px;
-}
-
-main{
-  width: 100%;
-  max-width: none;
-}
-
-
-p{ max-width: none; }
-
-@media (min-width: 900px){
- /
-  main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    align-items: start;
-  }
-
- 
-  main > h1,
-  main > h2,
-  main > h3,
-  main > p,
-  main > hr,
-  main > .resources{
-    grid-column: 1 / -1;
-  }
 }
