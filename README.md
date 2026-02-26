@@ -22,7 +22,7 @@ Your 24-Hour Travel Guide
 
 <li>
 <a href="sme_final/index.html" target="_blank">
-The Ultimate 24-Hour Travel Guide
+STACKD. by Sydney
 </a>
 </li>
 </ul>
